@@ -1,6 +1,3 @@
-// const { response } = require("express");
-// const { search } = require("../../../routes");
-
 const $backBtn = document.querySelector('#back-btn');
 const $pizzaName = document.querySelector('#pizza-name');
 const $createdBy = document.querySelector('#created-by');
@@ -112,8 +109,8 @@ function handleNewCommentSubmit(event) {
   }
 
   const formData = { commentBody, writtenBy };
-debugger;
-fetch(`/api/comments/${pizzaId}`, {
+
+  fetch(`/api/comments/${pizzaId}`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
